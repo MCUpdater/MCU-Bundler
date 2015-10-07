@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="MCUBootstrap.app" default="bundle" basedir=".">
+<project name="MCUpdater.app" default="bundle" basedir=".">
 	<taskdef name="bundleapp"
 		classname="com.oracle.appbundler.AppBundlerTask"
 		classpath="lib/appbundler-1.0.jar" />
-	
+
+	<target name="bundle">
+		<mkdir dir="out"/>
+		<bundleapp
+			outputdirectory="out"
+			name="MCUpdater"
+			displayname="MCUpdater"
+			identifier="org.mcupdater.bootstrap"
+			mainclassname="org.mcupdater.BootstrapForm">
+				<classpath file="MCUpdater.jar"/>
+		</bundleapp>
+	</target>
 </project>
