@@ -10,6 +10,7 @@
 			outputdirectory="out"
 			name="MCUpdater"
 			displayname="MCUpdater"
+			icon="lib/MCUpdater.icns"
 			identifier="org.mcupdater.bootstrap"
 			mainclassname="org.mcupdater.BootstrapForm">
 				<classpath file="MCUpdater.jar"/>
