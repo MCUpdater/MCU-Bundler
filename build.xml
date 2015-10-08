@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="MCUpdater.app" default="bundle" basedir=".">
+
+	<target name="bundle" depends="bundle-osx,bundle-win"/>
+
 	<taskdef name="bundleapp"
 		classname="com.oracle.appbundler.AppBundlerTask"
 		classpath="lib/appbundler-1.0.jar" />
-
-	<target name="bundle">
+	<target name="bundle-osx">
 		<mkdir dir="out"/>
 		<bundleapp
 			outputdirectory="out"
@@ -15,5 +17,9 @@
 			mainclassname="org.mcupdater.BootstrapForm">
 				<classpath file="MCUpdater.jar"/>
 		</bundleapp>
+	</target>
+
+	<target name="bundle-win">
+		<echo message="Windows bundling is not yet implemented."/>
 	</target>
 </project>
