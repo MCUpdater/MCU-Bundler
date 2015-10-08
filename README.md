@@ -24,12 +24,18 @@ this repository, one also needs:
 * A compiled "MCUpdater.jar" file, placed at the root directory of this repo.
 
 At that point, building the app is as simple as typing:
-    ant
+```
+ant
+```
 
 The default behavior is to package all configured bundlers. If you are only
 interested in building an individual target, you can run:
-    ant build-osx
+```
+ant build-osx
+```
 or
-    ant build-win
+```
+ant build-win
+```
 
 The resultant artifact(s) will be placed in the `out/` directory.
